@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  nakurwiator:
+    container_name: nakurwiator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/front'
+      - '/usr/src/front/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
