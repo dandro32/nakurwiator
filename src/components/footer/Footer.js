@@ -1,7 +1,13 @@
 import React from 'react';
 
 const Footer = () => {
-  return (<footer>CopyRight By Daniel</footer>);
+  return (
+    <footer>
+      <div className="row">
+        <span className='float-right'>CopyRight By Daniel</span>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

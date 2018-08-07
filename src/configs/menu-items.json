@@ -1,0 +1,32 @@
+[
+    {
+        "id": "trainings",
+        "name": "treningi",
+        "href": "/",
+        "icon": "ikonka"
+    },
+    {
+        "id": "exercises",
+        "name": "Ćwiczonka",
+        "href": "/exercises",
+        "icon": "ikonka"
+    },
+    {
+        "id": "raports",
+        "name": "Raporciki",
+        "href": "/raports",
+        "icon": "ikonka"
+    },
+    {
+        "id": "extras",
+        "name": "Ekstra",
+        "href": "/extras",
+        "icon": "ikonka"
+    },
+    {
+        "id": "settings",
+        "name": "Ustawienia",
+        "href": "/settings",
+        "icon": "ikonka"
+    }
+]
