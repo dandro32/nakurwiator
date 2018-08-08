@@ -2,8 +2,11 @@ import React from 'react';
 import Navigation from './Navigation';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import { slide as Menu } from 'react-burger-menu';
-import menuNavigationConfigs from '../../configs/menu-navigation.config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import menuNavigationConfigs from '../../../configs/menu-navigation.config';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+
+jest.mock('./NavigationRow', () => 'navigation row');
 
 describe('Navigation Component test', () => {
   let shallowRenderer;
@@ -24,16 +27,15 @@ describe('Navigation Component test', () => {
     expect(shallowRendererResult.props.children.length).toBe(5);
   });
 
-  it('href links should have all properties of burger menu', () => {
+  it('links should have all properties of burger menu', () => {
     const burgerLinks = shallowRendererResult.props.children;
     burgerLinks.map((link, i) => {
-      expect(link.type).toBe('a');
+      expect(link.type).toBe(Link);
       expect(link.props.id).toBe(menuNavigationConfigs[i].id);
-      expect(link.props.href).toBe(menuNavigationConfigs[i].href);
-      expect(link.props.children[0].type).toEqual(FontAwesomeIcon);
-      expect(link.props.children[1]).toBe(menuNavigationConfigs[i].name);
+      expect(link.props.to).toBe(menuNavigationConfigs[i].href);
+      expect(link.props.children.type).toBe('navigation row');
     });
   });
 
-
+//TODO: test close menu and state isOpen
 });

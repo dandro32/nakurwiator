@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="row">
-        <span className='float-right'>CopyRight By Daniel</span>
+        <div className="col">
+          <span className='float-right'>CopyRight By Daniel</span>
+        </div>
       </div>
     </footer>
   );

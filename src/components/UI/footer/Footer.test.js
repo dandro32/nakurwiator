@@ -13,7 +13,9 @@ describe('Footer test', () => {
   });
 
   it('should check rendered footer component span tag with copyright', () => {
-    expect(renderedFooter.children[0].children[0].children[0]).toEqual('CopyRight By Daniel');
+    const footerSpan = renderedFooter.children[0].children[0].children[0];
+    expect(footerSpan.children[0]).toEqual('CopyRight By Daniel');
+    expect(footerSpan.type).toEqual('span');
   });
 
 });
