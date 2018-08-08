@@ -1,14 +1,14 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import MenuItemsConfig from '../../configs/menu-items.config';
+import MenuNavigationConfig from '../../../configs/menu-navigation.config';
 import './React-burger-nav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Link } from 'react-router-dom';
 
 
 const Navigation = () => {
-  const menuItems = MenuItemsConfig.map((item) => {
-    return (<a key={item.id} id={item.id} className="menu-item" href={item.href}>
+  const menuItems = MenuNavigationConfig.map((item) => {
+    return (<Link to={item.href} key={item.id} id={item.id} className="menu-item">
       <div className="row d-flex align-items-center">
         <div className="col-4">
           <FontAwesomeIcon icon={item.icon} />
@@ -17,7 +17,7 @@ const Navigation = () => {
           <span> {item.name}</span>
         </div>
       </div>
-    </a>);
+    </Link>);
   });
 
   return (

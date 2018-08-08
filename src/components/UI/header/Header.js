@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from '../navigation/Navigation';
-import '../../styles/common.css';
+import '../../../styles/common.css';
 
 const Header = ({user}) => {
   return (

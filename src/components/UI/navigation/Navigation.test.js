@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import { slide as Menu } from 'react-burger-menu';
-import menuItemsConfigs from '../../configs/menu-items.config';
+import menuNavigationConfigs from '../../configs/menu-navigation.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 describe('Navigation Component test', () => {
@@ -28,10 +28,10 @@ describe('Navigation Component test', () => {
     const burgerLinks = shallowRendererResult.props.children;
     burgerLinks.map((link, i) => {
       expect(link.type).toBe('a');
-      expect(link.props.id).toBe(menuItemsConfigs[i].id);
-      expect(link.props.href).toBe(menuItemsConfigs[i].href);
+      expect(link.props.id).toBe(menuNavigationConfigs[i].id);
+      expect(link.props.href).toBe(menuNavigationConfigs[i].href);
       expect(link.props.children[0].type).toEqual(FontAwesomeIcon);
-      expect(link.props.children[1]).toBe(menuItemsConfigs[i].name);
+      expect(link.props.children[1]).toBe(menuNavigationConfigs[i].name);
     });
   });
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-
+import Header from './components/UI/header/Header';
+import Footer from './components/UI/footer/Footer';
+import Main from './components/Main';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -11,10 +12,13 @@ class App extends Component {
     };
 
     return (
-      <div className='containter-fluid'>
-        <Header user={user} />
-        <Footer />  
-      </div>
+      <Router>
+        <div className='containter-fluid'>
+          <Header user={user} />
+          <Main></Main>
+          <Footer />  
+        </div>
+      </Router>
     );
   }
 }

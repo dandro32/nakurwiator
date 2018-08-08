@@ -4,7 +4,7 @@ const MENU_ITEMS = [
   {
     'id': 'trainings',
     'name': 'Treningi',
-    'href': '/',
+    'href': '/trainings',
     'icon': faDumbbell
   },
   {
