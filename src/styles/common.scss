@@ -1,0 +1,14 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+header {
+    height: 100px;
+    span {
+        font-family: 'Warsaw Gothic', sans-serif;
+        font-size: 30px;
+    }
+}
+
+.b-bottom {
+    border-bottom: 3px solid $border-color;
+}

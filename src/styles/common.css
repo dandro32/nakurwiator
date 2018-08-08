@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Warsaw Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Warsaw Gothic"), url(./fonts/warsaw_gothic/WarsawGothic.otf) format("opentype"); }
+
+header {
+  height: 100px; }
+  header span {
+    font-family: 'Warsaw Gothic', sans-serif;
+    font-size: 30px; }
+
+.b-bottom {
+  border-bottom: 3px solid #515A5A; }
