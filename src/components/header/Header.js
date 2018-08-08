@@ -5,11 +5,11 @@ import '../../styles/common.css';
 
 const Header = ({user}) => {
   return (
-    <header className="row b-bottom">
+    <header className="row navbar-fixed-bottom b-bottom">
       <div className="col">
         <Navigation className="float-left" />
       </div>
-      <div className="col-3 align-middle">
+      <div className="col-3 text-center">
         <span className='align-middle'>{user.email}</span>
       </div>
     </header>);

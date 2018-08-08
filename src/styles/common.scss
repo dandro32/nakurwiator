@@ -1,14 +1,29 @@
 @import 'colors.scss';
 @import 'fonts.scss';
+$header_height: 100px;
 
 header {
-    height: 100px;
+    height: $header_height;
     span {
         font-family: 'Warsaw Gothic', sans-serif;
         font-size: 30px;
+        line-height: $header_height;
     }
 }
 
 .b-bottom {
     border-bottom: 3px solid $border-color;
+}
+
+nav .menu-item {
+    color: $font-white;
+    font-family: 'Warsaw Gothic', sans-serif;
+    font-size: 32px;
+    :hover {
+        color: $font-light-grey;
+    }
+}
+
+a:hover {
+    text-decoration-color: $font-light-grey;
 }

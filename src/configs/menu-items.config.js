@@ -3,25 +3,25 @@ import { faDumbbell, faAllergies, faChartLine, faPrescriptionBottle, faCogs} fro
 const MENU_ITEMS = [
   {
     'id': 'trainings',
-    'name': 'treningi',
+    'name': 'Treningi',
     'href': '/',
     'icon': faDumbbell
   },
   {
     'id': 'exercises',
-    'name': 'Ćwiczonka',
+    'name': 'Atlas ćwiczeń',
     'href': '/exercises',
     'icon': faAllergies
   },
   {
     'id': 'raports',
-    'name': 'Raporciki',
+    'name': 'Pompy raporty',
     'href': '/raports',
     'icon': faChartLine
   },
   {
     'id': 'extras',
-    'name': 'Ekstra',
+    'name': 'Masóweczki',
     'href': '/extras',
     'icon': faPrescriptionBottle
   },
