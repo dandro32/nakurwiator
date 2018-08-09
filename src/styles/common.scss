@@ -27,3 +27,11 @@ nav .menu-item {
 main {
     height: 100vh;
 }
+
+.activeNavLink {
+    color:red !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
