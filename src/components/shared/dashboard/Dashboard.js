@@ -8,7 +8,7 @@ const Dashboard = ({cards}) => {
   });
 
   return (
-    <div className="row justify-content-center align-self-center">
+    <div className="row d-flex justify-content-around align-items-center">
       {dashboardCards}
     </div>
   );

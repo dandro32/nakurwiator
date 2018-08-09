@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import {HashRouter as Router} from 'react-router-dom';
+import {MemoryRouter as Router} from 'react-router-dom';
 import TestRenderer from 'react-test-renderer';
 
 describe('Card component tests', ()=> {
@@ -14,13 +14,15 @@ describe('Card component tests', ()=> {
   };
   beforeEach(() => {
     result = TestRenderer.create(
-      <Card card={mockCard} />
-    ).toTree();
+      <Router>
+        <Card card={mockCard} />
+      </Router>
+      
+    ).toJSON();
 
   });
 
   it('renders correctly', () => {
-    console.log(result);
     expect(result).toMatchSnapshot();
   });
 });
