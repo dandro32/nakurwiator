@@ -23,7 +23,7 @@ describe('Header tests', () => {
   });
 
   it('should check Header bootstrap classes', () => {
-    expect(renderedHeader.props.className).toBe('row navbar-fixed-bottom b-bottom');
+    expect(renderedHeader.props.className).toBe('row navbar-fixed-bottom b-bottom sticky-top');
   });
 
   it('should check if navigation component is set in first div', () => {

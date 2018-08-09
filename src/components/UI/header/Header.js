@@ -5,7 +5,7 @@ import '../../../styles/common.css';
 
 const Header = ({user}) => {
   return (
-    <header className="row navbar-fixed-bottom b-bottom">
+    <header className="row navbar-fixed-bottom b-bottom sticky-top">
       <div className="col">
         <Navigation className="float-left" />
       </div>

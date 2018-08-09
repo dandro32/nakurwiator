@@ -5,7 +5,8 @@
   src: local("Warsaw Gothic"), url(./fonts/warsaw_gothic/WarsawGothic.otf) format("opentype"); }
 
 header {
-  height: 100px; }
+  height: 100px;
+  background-color: #fff; }
   header span {
     font-family: 'Warsaw Gothic', sans-serif;
     font-size: 30px;
@@ -29,3 +30,11 @@ main {
 
 a:hover {
   text-decoration: none !important; }
+
+@media (max-width: 576px) {
+  header span {
+    font-size: 18px; } }
+
+@media (max-width: 768px) {
+  header span {
+    font-size: 22px; } }

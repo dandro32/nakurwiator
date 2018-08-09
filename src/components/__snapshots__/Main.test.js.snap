@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component tests renders correctly 1`] = `
+<main>
+  <Redirect
+    from="/"
+    push={false}
+    to="/trainings"
+  />
+  <Route
+    path="/trainings"
+    render={[Function]}
+  />
+  <Route
+    path="/exercises"
+    render={[Function]}
+  />
+  <Route
+    path="/raports"
+    render={[Function]}
+  />
+  <Route
+    path="/extras"
+    render={[Function]}
+  />
+  <Route
+    path="/settings"
+    render={[Function]}
+  />
+</main>
+`;

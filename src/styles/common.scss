@@ -1,9 +1,12 @@
 @import 'colors.scss';
 @import 'fonts.scss';
+
+
 $header_height: 100px;
 
 header {
     height: $header_height;
+    background-color: $font-white;
     span {
         font-family: 'Warsaw Gothic', sans-serif;
         font-size: 30px;
@@ -35,3 +38,6 @@ main {
 a:hover {
     text-decoration: none !important;
 }
+
+
+@import 'responsive.scss'
