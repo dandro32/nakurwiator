@@ -6,14 +6,14 @@ const Trainings = () => {
     {
       title: 'Dodaj nowy trening',
       desc: 'Zaplanuj sobie nowy trening i sprawdź pompę',
-      href: '/trainigns/new',
+      href: '/trainings/new',
       hrefTitle: 'Dawej',
       imgSrc: '/img/training_new.jpg'
     },
     {
       title: 'Lista treningów',
       desc: 'Obczaj swoje treningi, edytuj lub usuwaj',
-      href: '/trainigns/list',
+      href: '/trainings/list',
       hrefTitle: 'Sprawdzam',
       imgSrc: '/img/training_list.jpg'
     }

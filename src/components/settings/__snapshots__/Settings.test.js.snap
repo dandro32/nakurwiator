@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings component tests renders correctly 1`] = `
+Object {
+  "instance": null,
+  "nodeType": "component",
+  "props": Object {},
+  "rendered": Object {
+    "instance": null,
+    "nodeType": "host",
+    "props": Object {
+      "cards": Array [
+        Object {
+          "desc": "Mieszej w konfiguracji tej apki",
+          "href": "/settings/general",
+          "hrefTitle": "Mieszej se",
+          "imgSrc": "/img/settings_general.jpg",
+          "title": "Ogólne",
+        },
+      ],
+    },
+    "rendered": Array [],
+    "type": "Dashboard component",
+  },
+  "type": [Function],
+}
+`;
