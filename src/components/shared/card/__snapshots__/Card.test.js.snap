@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component tests renders correctly 1`] = `
+<div
+  className="card"
+>
+  <img
+    className="card-img-top"
+    src="imgSrc"
+  />
+  <div
+    className="card-body"
+  >
+    <h5
+      className="card-title"
+    >
+      title
+    </h5>
+    <p
+      className="card-text"
+    >
+      desc
+    </p>
+    <a
+      className="btn btn-primary"
+      href="/href"
+      onClick={[Function]}
+    >
+      hrefTitle
+    </a>
+  </div>
+</div>
+`;

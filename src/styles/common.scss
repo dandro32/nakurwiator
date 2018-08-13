@@ -1,0 +1,52 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+
+
+$header_height: 20vh;
+$footer_height: 30px;
+$dashboard_height: 80vh;
+
+header {
+    height: $header_height;
+    background-color: $font-white;
+    span {
+        font-family: 'Warsaw Gothic', sans-serif;
+        font-size: 30px;
+        line-height: $header_height;
+    }
+}
+
+.b-bottom {
+    border-bottom: 3px solid $border-color;
+}
+
+nav .menu-item {
+    color: $font-white;
+    font-family: 'Warsaw Gothic', sans-serif;
+    font-size: 32px;
+    :hover {
+        color: $font-light-grey;
+    }
+}
+
+.dashboard-containter {
+    height: $dashboard_height;
+}
+
+.activeNavLink {
+    color:red !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.card-img-top {
+    height: 240px;
+}
+
+.footer {
+    height: $footer_height;
+}
+
+@import 'responsive.scss'

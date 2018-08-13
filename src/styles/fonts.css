@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Warsaw Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Warsaw Gothic"), url(./fonts/warsaw_gothic/WarsawGothic.otf) format("opentype"); }

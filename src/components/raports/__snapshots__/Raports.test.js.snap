@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Raports component tests renders correctly 1`] = `
+Object {
+  "instance": null,
+  "nodeType": "component",
+  "props": Object {},
+  "rendered": Object {
+    "instance": null,
+    "nodeType": "host",
+    "props": Object {
+      "cards": Array [
+        Object {
+          "desc": "Sprawdź raporty w formie timelinów",
+          "href": "/raports/timeline",
+          "hrefTitle": "Obczej",
+          "imgSrc": "/img/raports_timeline.jpg",
+          "title": "Timeliny",
+        },
+      ],
+    },
+    "rendered": Array [],
+    "type": "Dashboard component",
+  },
+  "type": [Function],
+}
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component test should render dashboard correctly 1`] = `
+<div
+  className="row justify-content-center align-self-center"
+>
+  <Card component
+    card={
+      Object {
+        "test1": "test",
+      }
+    }
+  />
+  <Card component
+    card={
+      Object {
+        "test2": "test",
+      }
+    }
+  />
+  <Card component
+    card={
+      Object {
+        "test3": "test",
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Warsaw Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Warsaw Gothic"), url(./fonts/warsaw_gothic/WarsawGothic.otf) format("opentype"); }
+
+header {
+  height: 20vh;
+  background-color: #fff; }
+  header span {
+    font-family: 'Warsaw Gothic', sans-serif;
+    font-size: 30px;
+    line-height: 20vh; }
+
+.b-bottom {
+  border-bottom: 3px solid #515A5A; }
+
+nav .menu-item {
+  color: #fff;
+  font-family: 'Warsaw Gothic', sans-serif;
+  font-size: 32px; }
+  nav .menu-item :hover {
+    color: #bdbdbd; }
+
+.dashboard-containter {
+  height: 80vh; }
+
+.activeNavLink {
+  color: red !important; }
+
+a:hover {
+  text-decoration: none !important; }
+
+.card-img-top {
+  height: 240px; }
+
+.footer {
+  height: 30px; }
+
+@media (max-width: 576px) {
+  header span {
+    font-size: 18px; } }
+
+@media (max-width: 768px) {
+  header span {
+    font-size: 22px; } }
