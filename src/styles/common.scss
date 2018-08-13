@@ -2,7 +2,9 @@
 @import 'fonts.scss';
 
 
-$header_height: 100px;
+$header_height: 20vh;
+$footer_height: 30px;
+$dashboard_height: 80vh;
 
 header {
     height: $header_height;
@@ -27,8 +29,8 @@ nav .menu-item {
     }
 }
 
-main {
-    height: 100vh;
+.dashboard-containter {
+    height: $dashboard_height;
 }
 
 .activeNavLink {
@@ -43,5 +45,8 @@ a:hover {
     height: 240px;
 }
 
+.footer {
+    height: $footer_height;
+}
 
 @import 'responsive.scss'

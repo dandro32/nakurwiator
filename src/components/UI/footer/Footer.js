@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="fixed-bottom">
       <div className="row">
         <div className="col">
           <span className='float-right'>CopyRight By Daniel</span>
