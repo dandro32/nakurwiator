@@ -2,7 +2,7 @@ import React from 'react';
 import Trainings from './Trainings';
 import TestRenderer from 'react-test-renderer';
 
-jest.mock('../shared/dashboard/Dashboard', () => 'Dashboard component');
+jest.mock('../UI/dashboard/Dashboard', () => 'Dashboard component');
 
 describe('Trainings component tests', ()=> {
   let result;

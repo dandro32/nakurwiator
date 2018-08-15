@@ -1,5 +1,5 @@
 import React from 'react';
-import Dashboard from '../shared/dashboard/Dashboard';
+import Dashboard from '../UI/dashboard/Dashboard';
 
 const Raports = () => {
   const cards = [
