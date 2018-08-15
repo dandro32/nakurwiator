@@ -5,6 +5,7 @@ exports[`Card component tests renders correctly 1`] = `
   className="card"
 >
   <img
+    alt={undefined}
     className="card-img-top"
     src="imgSrc"
   />
@@ -21,13 +22,17 @@ exports[`Card component tests renders correctly 1`] = `
     >
       desc
     </p>
-    <a
-      className="btn btn-primary"
-      href="/href"
-      onClick={[Function]}
+    <p
+      className="text-center"
     >
-      hrefTitle
-    </a>
+      <a
+        className="btn btn-primary"
+        href="/href"
+        onClick={[Function]}
+      >
+        hrefTitle
+      </a>
+    </p>
   </div>
 </div>
 `;

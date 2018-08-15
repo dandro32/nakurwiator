@@ -16,7 +16,9 @@ const Header = ({user}) => {
 };
 
 Header.propTypes = {
-  user: PropTypes.object.isRequired
+  user: PropTypes.shape({
+    email: PropTypes.string.isRequired
+  })
 };
 
 export default Header;

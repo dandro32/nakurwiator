@@ -6,9 +6,20 @@ jest.mock('../card/Card', () => 'Card component');
 
 describe('Dashboard component test', () => {
   const mockCarsdData = [
-    {test1: 'test'},
-    {test2: 'test'},
-    {test3: 'test'}
+    {
+      title: 'Timeliny',
+      desc: 'Sprawdź raporty w formie timelinów',
+      href: '/raports/timeline',
+      hrefTitle: 'Obczej',
+      imgSrc: '/img/raports_timeline.jpg'
+    }, 
+    {
+      title: 'Timeliny',
+      desc: 'Sprawdź raporty w formie timelinów',
+      href: '/raports/timeline',
+      hrefTitle: 'Obczej',
+      imgSrc: '/img/raports_timeline.jpg'
+    }, 
   ];
   let renderedDashboard;
     
@@ -23,7 +34,7 @@ describe('Dashboard component test', () => {
   });
 
   it('should render dashboard cards exact count', ()=> {
-    expect(renderedDashboard.children.length).toBe(3);
+    expect(renderedDashboard.children.length).toBe(2);
   });
 
 

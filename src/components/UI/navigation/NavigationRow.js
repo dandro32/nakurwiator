@@ -16,7 +16,12 @@ const NavigationRow = ({row}) => {
 };
 
 NavigationRow.propTypes = {
-  row: PropTypes.object.isRequired
+  row: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    icon: PropTypes.object.isRequired
+  })
 };
 
 export default NavigationRow;

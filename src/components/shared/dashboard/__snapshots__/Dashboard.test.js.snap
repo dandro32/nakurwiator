@@ -2,26 +2,27 @@
 
 exports[`Dashboard component test should render dashboard correctly 1`] = `
 <div
-  className="row justify-content-center align-self-center"
+  className="row dashboard-containter justify-content-around align-items-center"
 >
   <Card component
     card={
       Object {
-        "test1": "test",
+        "desc": "Sprawdź raporty w formie timelinów",
+        "href": "/raports/timeline",
+        "hrefTitle": "Obczej",
+        "imgSrc": "/img/raports_timeline.jpg",
+        "title": "Timeliny",
       }
     }
   />
   <Card component
     card={
       Object {
-        "test2": "test",
-      }
-    }
-  />
-  <Card component
-    card={
-      Object {
-        "test3": "test",
+        "desc": "Sprawdź raporty w formie timelinów",
+        "href": "/raports/timeline",
+        "hrefTitle": "Obczej",
+        "imgSrc": "/img/raports_timeline.jpg",
+        "title": "Timeliny",
       }
     }
   />

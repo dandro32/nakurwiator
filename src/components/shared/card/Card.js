@@ -22,7 +22,13 @@ const Card = ({card}) => {
 };
 
 Card.propTypes = {
-  card: PropTypes.object.isRequired
+  card: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    hrefTitle: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+  })
 };
 
 export default Card;

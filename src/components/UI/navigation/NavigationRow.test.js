@@ -5,6 +5,8 @@ import { faDumbbell} from '@fortawesome/free-solid-svg-icons';
 
 describe('NavigationRow component test', () => {
   const mockRow = {
+    id: 'test',
+    href: '/test',
     name: 'test',
     icon: faDumbbell
   };

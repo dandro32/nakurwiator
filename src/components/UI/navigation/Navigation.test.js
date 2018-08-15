@@ -4,7 +4,6 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 import TestRenderer from 'react-test-renderer';
 import { slide as Menu } from 'react-burger-menu';
 import menuNavigationConfigs from '../../../configs/menu-navigation.config';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink as Link, HashRouter as Router } from 'react-router-dom';
 
 jest.mock('./NavigationRow', () => 'navigation row');

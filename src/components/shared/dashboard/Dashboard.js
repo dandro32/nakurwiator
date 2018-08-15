@@ -15,7 +15,15 @@ const Dashboard = ({cards}) => {
 };
 
 Dashboard.propTypes = {
-  cards: PropTypes.array.isRequired
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      desc: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+      hrefTitle: PropTypes.string.isRequired,
+      imgSrc: PropTypes.string.isRequired,
+    })
+  )
 };
 
 export default Dashboard;
