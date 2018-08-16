@@ -1,5 +1,7 @@
 import A from '../configs/redux-action-names.config';
 import * as api from './api-actions';
+
+const TRAINING_PATH = 'trainings';
  
 export const getTrainings = (trainigs) => {
   return {
@@ -39,17 +41,17 @@ export const updateTrainig = (training) => {
 
 
 export const apiGetTrainings = () => {
-  return api.getData('trainings', getTrainings);
+  return api.getData(`${TRAINING_PATH}`, getTrainings);
 };
 
 export const apiAddTraining = (training) => {
-  return api.postData('training', getTrainings, training);
+  return api.postData(`${TRAINING_PATH}`, addTraining, training);
 };
 
 export const apiUpdateTraining = (training) => {
-  return api.putData(`trainings/${training.id}`, getTrainings, training);
+  return api.putData(`${TRAINING_PATH}/${training.id}`, updateTrainig, training);
 };
 
 export const apiRemoveTraining = (id) => {
-  return api.deleteData(`trainings/${id}`, getTrainings, id);
+  return api.deleteData(`${TRAINING_PATH}/${id}`, removeTraining, id);
 };
