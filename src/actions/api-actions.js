@@ -20,7 +20,7 @@ export const requestError = (err) => {
 export const getData = (apiPath, action) => {
   return dispatch => {
     dispatch(pendingData());
-    fetch(`${apiConfig.baseApiUrl}${apiPath}`)
+    return fetch(`${apiConfig.baseApiUrl}${apiPath}`)
       .then(response=> dispatch(action(response.data)))
       .catch(err=> dispatch(requestError(err)));
   };
@@ -29,7 +29,7 @@ export const getData = (apiPath, action) => {
 export const postData = (apiPath, action, payload) => {
   return dispatch => {
     dispatch(pendingData());
-    fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
+    return fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -46,7 +46,7 @@ export const postData = (apiPath, action, payload) => {
 export const putData = (apiPath, action, payload) => {
   return dispatch => {
     dispatch(pendingData());
-    fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
+    return fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -63,7 +63,7 @@ export const putData = (apiPath, action, payload) => {
 export const deleteData = (apiPath, action, id) => {
   return dispatch => {
     dispatch(pendingData());
-    fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
+    return fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
       method: 'DELETE',
     })
       .then(()=> dispatch(action(id)))
