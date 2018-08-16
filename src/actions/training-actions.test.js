@@ -32,9 +32,10 @@ describe('Training actions test', () => {
 
 
   it('should test apiAddTraining function', () => {
+    const addObj = {test:'test'};
     const spy = jest.spyOn(api, 'postData').mockReturnValue(true);
-    expect(a.apiAddTraining('test')).toBe(true);
-    expect(spy).toHaveBeenCalledWith('trainings', a.addTraining, 'test');
+    expect(a.apiAddTraining(addObj)).toBe(true);
+    expect(spy).toHaveBeenCalledWith('trainings', a.addTraining, addObj);
   });
 
   it('should test apiUpdateTraining function', () => {

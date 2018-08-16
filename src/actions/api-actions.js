@@ -1,7 +1,7 @@
 import A from '../configs/redux-action-names.config';
 import fetch from 'isomorphic-fetch';
 import apiConfig from '../configs/api.config.json';
-
+import { v4 } from 'uuid';
 
 export const pendingData = () => {
   return {
@@ -29,15 +29,16 @@ export const getData = (apiPath, action) => {
 export const postData = (apiPath, action, payload) => {
   return dispatch => {
     dispatch(pendingData());
+    const payloadWithNewId = {...payload, id: v4()};
     return fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payloadWithNewId)
     })
-      .then(()=> dispatch(action(payload)))
+      .then(response=> dispatch(action(response.data)))
       .catch(err=> dispatch(requestError(err)));
   };
 };
@@ -54,7 +55,7 @@ export const putData = (apiPath, action, payload) => {
       },
       body: JSON.stringify(payload)
     })
-      .then(()=> dispatch(action(payload)))
+      .then(response=> dispatch(action(response.data)))
       .catch(err=> dispatch(requestError(err)));
   };
 };
