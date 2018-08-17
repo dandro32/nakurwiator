@@ -9,7 +9,7 @@ const Main = () => {
         key={i}
         path={route.path}
         render={props => (
-          <route.component {...props} />
+          <route.component {...props} routes={route.routes} />
         )}
       />
     );

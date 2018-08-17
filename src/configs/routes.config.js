@@ -3,11 +3,18 @@ import Exercises from '../components/exercises/Exercises';
 import Raports from '../components/raports/Raports';
 import Extras from '../components/extras/Extras';
 import Settings from '../components/settings/Settings';
+import TrainingsListContainer from '../components/trainings/trainings-list/Trainings-list-container';
 
 const ROUTES = [
   {
     path: '/trainings',
-    component: Trainings
+    component: Trainings,
+    routes: [
+      {
+        path: '/trainings/list',
+        component: TrainingsListContainer
+      },
+    ]
   },
   {
     path: '/exercises',
