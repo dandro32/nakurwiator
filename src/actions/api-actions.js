@@ -20,8 +20,14 @@ export const requestError = (err) => {
 export const getData = (apiPath, action) => {
   return dispatch => {
     dispatch(pendingData());
-    return fetch(`${apiConfig.baseApiUrl}${apiPath}`)
-      .then(response=> dispatch(action(response.data)))
+    return fetch(`${apiConfig.baseApiUrl}${apiPath}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response=> response.json())
+      .then(data => dispatch(action(data)))
       .catch(err=> dispatch(requestError(err)));
   };
 };

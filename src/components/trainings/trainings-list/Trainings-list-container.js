@@ -2,16 +2,13 @@ import { TrainingsList } from './Trainings-list';
 import { connect } from 'react-redux';
 import * as act from './../../../actions/training-actions';
 
-const mapStateToProps = state =>
-  ({
-    trainings: [...state.trainings]
-  });
+const mapStateToProps = state => ({
+  trainings: state.trainingsReducer.trainings
+});
 
 const mapDispatchToProps = dispatch =>
   ({
-    apiGetTrainings() {
-      dispatch(act.apiGetTrainings());
-    }
+    fetchTrainings:() => dispatch(act.apiGetTrainings())
   });
 
 const TrainingListContainer = connect(

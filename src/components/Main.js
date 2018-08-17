@@ -8,8 +8,9 @@ const Main = () => {
       <Route
         key={i}
         path={route.path}
+        exact = {route.exact}
         render={props => (
-          <route.component {...props} routes={route.routes} />
+          <route.component {...props} />
         )}
       />
     );

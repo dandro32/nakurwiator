@@ -4,25 +4,35 @@ import PropTypes from 'prop-types';
 export class TrainingsList extends Component {
     constructor() {
         super();
-        console.log(this.props);
+      
     }  
     static propTypes = {
-        apiGetTrainings: PropTypes.func.isRequired,
+        fetchTrainings: PropTypes.func.isRequired,
         trainings: PropTypes.array.isRequired
     };
 
 
   componentDidMount() {
-    this.props.apiGetTrainings();
+    const {fetchTrainings} = this.props;
+    fetchTrainings();
   }
 
   render() {
-    const trainings = this.props.trainings;
-    const mappedTrainings = trainings.map((training) => {
+    const { isLoading, isError, isLoaded, data } = this.props.trainings;
+    console.log( this.props.trainings);
+    console.log(data)
+    const mappedTrainings = data.map((training) => {
       return <p key={training.id}>{training.name}</p>;
     });
     return(
-      {mappedTrainings}
+      <div> 
+        <h1>
+      test
+      </h1>
+      {isLoaded}? {mappedTrainings} : loading
+        </div>
+     
+      
     );
   }
 }

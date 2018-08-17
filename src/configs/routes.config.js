@@ -8,13 +8,12 @@ import TrainingsListContainer from '../components/trainings/trainings-list/Train
 const ROUTES = [
   {
     path: '/trainings',
+    exact: true,
     component: Trainings,
-    routes: [
-      {
-        path: '/trainings/list',
-        component: TrainingsListContainer
-      },
-    ]
+  },
+  {
+    path: '/trainings/list',
+    component: TrainingsListContainer
   },
   {
     path: '/exercises',
