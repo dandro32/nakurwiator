@@ -2,11 +2,11 @@ import { TrainingsList } from './Trainings-list';
 import { connect } from 'react-redux';
 import * as act from './../../../actions/training-actions';
 
-const mapStateToProps = ({trainingsReducer}) => ({
+export const mapStateToProps = ({trainingsReducer}) => ({
   trainings: trainingsReducer.trainings
 });
 
-const mapDispatchToProps = dispatch =>
+export const  mapDispatchToProps = dispatch =>
   ({
     fetchTrainings:() => dispatch(act.apiGetTrainings())
   });
