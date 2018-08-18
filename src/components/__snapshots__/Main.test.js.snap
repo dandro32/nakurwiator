@@ -2,28 +2,38 @@
 
 exports[`Main component tests renders correctly 1`] = `
 <main>
-  <Redirect
-    from="/"
-    push={false}
-    to="/trainings"
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
   />
   <Route
+    exact={true}
     path="/trainings"
     render={[Function]}
   />
   <Route
+    exact={undefined}
+    path="/trainings/list"
+    render={[Function]}
+  />
+  <Route
+    exact={undefined}
     path="/exercises"
     render={[Function]}
   />
   <Route
+    exact={undefined}
     path="/raports"
     render={[Function]}
   />
   <Route
+    exact={undefined}
     path="/extras"
     render={[Function]}
   />
   <Route
+    exact={undefined}
     path="/settings"
     render={[Function]}
   />

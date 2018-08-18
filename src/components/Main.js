@@ -17,7 +17,7 @@ const Main = () => {
   });
   return (
     <main>
-      <Redirect from="/" to="/trainings" />
+      <Route exact path="/" render={() => <Redirect to="/trainings" />} />
       {routes}
     </main>
   );

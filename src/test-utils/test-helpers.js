@@ -7,10 +7,12 @@ export const freeze = (...objList) => {
   } );
 };
 
-export const populateMockData = (count) => {
+export const populateMockData = (count, reducerName) => {
   const initialState = getInitialState();
   for(let i = 1; i <= count; i++) {
-    initialState.data.push({id: i, [`prop${i}`]: `prop${i}`});
+    initialState[reducerName].data.push({id: i, [`prop${i}`]: `prop${i}`});
   }
-  return {...initialState, isLoaded: true};
+  const returnState =  {...initialState};
+  returnState[reducerName].isLoaded = true;
+  return returnState;
 };

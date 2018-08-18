@@ -2,8 +2,8 @@ import { TrainingsList } from './Trainings-list';
 import { connect } from 'react-redux';
 import * as act from './../../../actions/training-actions';
 
-const mapStateToProps = state => ({
-  trainings: state.trainingsReducer.trainings
+const mapStateToProps = ({trainingsReducer}) => ({
+  trainings: trainingsReducer.trainings
 });
 
 const mapDispatchToProps = dispatch =>

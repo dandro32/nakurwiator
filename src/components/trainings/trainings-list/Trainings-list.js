@@ -8,7 +8,12 @@ export class TrainingsList extends Component {
     }  
     static propTypes = {
         fetchTrainings: PropTypes.func.isRequired,
-        trainings: PropTypes.array.isRequired
+        trainings: PropTypes.shape({
+          data: PropTypes.array.isRequired,
+          isLoading: PropTypes.bool.isRequired,
+          isLoaded:PropTypes.bool.isRequired, 
+          isError: PropTypes.bool.string
+        })
     };
 
 
@@ -19,8 +24,6 @@ export class TrainingsList extends Component {
 
   render() {
     const { isLoading, isError, isLoaded, data } = this.props.trainings;
-    console.log( this.props.trainings);
-    console.log(data)
     const mappedTrainings = data.map((training) => {
       return <p key={training.id}>{training.name}</p>;
     });
@@ -29,10 +32,8 @@ export class TrainingsList extends Component {
         <h1>
       test
       </h1>
-      {isLoaded}? {mappedTrainings} : loading
+      {isLoaded ? mappedTrainings : 'loading' }
         </div>
-     
-      
     );
   }
 }
