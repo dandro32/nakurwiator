@@ -33,7 +33,7 @@ export class TrainingsList extends Component {
       <div> 
         {isLoading && <Loader />}
         <SectionHeading icon={faDumbbell} title='Lista treningów' />
-
+        
         {isLoaded &&  mappedTrainings}
       </div>
     );

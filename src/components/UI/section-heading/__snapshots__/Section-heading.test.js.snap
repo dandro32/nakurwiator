@@ -55,7 +55,7 @@ Object {
          
         test
 </h2>,
-      "className": "row",
+      "className": "row justify-content-center mt-5",
     },
     "rendered": Array [
       Object {
