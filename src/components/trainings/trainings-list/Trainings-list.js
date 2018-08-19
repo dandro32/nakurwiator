@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../../UI/loader/Loader';
-
-
+import SectionHeading from '../../UI/section-heading/Section-heading';
+import { faDumbbell} from '@fortawesome/free-solid-svg-icons';
 export class TrainingsList extends Component {
     constructor() {
         super();
@@ -32,7 +32,7 @@ export class TrainingsList extends Component {
     return(
       <div> 
         {isLoading && <Loader />}
-        
+        <SectionHeading icon={faDumbbell} title='Lista treningów' />
 
         {isLoaded &&  mappedTrainings}
       </div>
