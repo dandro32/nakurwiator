@@ -1,19 +1,28 @@
 import A from '../configs/redux-action-names.config';
 import * as api from './api-actions';
+import notification from './notify-action';
 
 const TRAINING_PATH = 'trainings';
  
 export const getTrainings = (trainigs) => {
-  return {
-    type: A.GET_TRAININGS,
-    data: trainigs
+  return dispatch => {
+    dispatch(notification('Pobrano treningi', 'success'));
+    dispatch({
+      type: A.GET_TRAININGS,
+      data: trainigs
+    });
+
   };
 };
 
 export const getTraining = (id) => {
-  return {
-    type: A.GET_TRAINING,
-    data: id
+  return dispatch => {
+    dispatch(notification('Pobrano treningi', 'success'));
+    dispatch({
+      type: A.GET_TRAINING,
+      data: id
+    });
+
   };
 };
 

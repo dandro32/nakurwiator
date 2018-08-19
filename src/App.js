@@ -18,10 +18,10 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        <Notifs />
         <Router>
           <div className='containter-fluid'>
             <Header user={user} />
+            <Notifs />
             <Main></Main>
             <Footer />  
           </div>

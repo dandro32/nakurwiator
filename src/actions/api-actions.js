@@ -1,6 +1,7 @@
 import A from '../configs/redux-action-names.config';
 import fetch from 'isomorphic-fetch';
 import apiConfig from '../configs/api.config.json';
+import notification from './notify-action';
 import { v4 } from 'uuid';
 
 export const pendingData = () => {
@@ -10,9 +11,12 @@ export const pendingData = () => {
 };
 
 export const requestError = (err) => {
-  return {
-    type: A.REQUEST_ERROR,
-    data: err
+  return dispatch => {
+    dispatch(notification('Błąd integracji z api', 'warning'));
+    dispatch({
+      type: A.REQUEST_ERROR,
+      data: err
+    });
   };
 };
 
