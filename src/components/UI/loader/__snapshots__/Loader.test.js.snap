@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader component tests should render loader component 1`] = `
+<Connect(LoadingBar)
+  className="progress-bar"
+/>
+`;

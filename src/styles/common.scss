@@ -49,4 +49,10 @@ a:hover {
     height: $footer_height;
 }
 
+.progress-bar {
+    background-color: $border-color !important; 
+    height: 10px; 
+    position: absolute;
+}
+
 @import 'responsive.scss'

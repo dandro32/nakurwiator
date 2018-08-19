@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Loader from '../../UI/loader/Loader';
+
 
 export class TrainingsList extends Component {
     constructor() {
@@ -29,11 +31,11 @@ export class TrainingsList extends Component {
     });
     return(
       <div> 
-        <h1>
-      test
-      </h1>
-      {isLoaded ? mappedTrainings : 'loading' }
-        </div>
+        {isLoading && <Loader />}
+        
+
+        {isLoaded &&  mappedTrainings}
+      </div>
     );
   }
 }

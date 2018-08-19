@@ -37,6 +37,11 @@ a:hover {
 .footer {
   height: 30px; }
 
+.progress-bar {
+  background-color: #515A5A !important;
+  height: 10px;
+  position: absolute; }
+
 @media (max-width: 576px) {
   header span {
     font-size: 18px; } }
