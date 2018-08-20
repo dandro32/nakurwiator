@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../../UI/loader/Loader';
-import SectionHeading from '../../UI/section-heading/Section-heading';
+import SectionComponent from '../../UI/section/Section'
 import { faDumbbell} from '@fortawesome/free-solid-svg-icons';
+import TableWrapper from '../../UI/table/Table-wrapper';
+
+const SectionLoadingComponent = SectionComponent(TableWrapper);
+
 export class TrainingsList extends Component {
-    constructor() {
-        super();
-      
-    }  
+
     static propTypes = {
         fetchTrainings: PropTypes.func.isRequired,
         trainings: PropTypes.shape({
@@ -18,23 +18,22 @@ export class TrainingsList extends Component {
         })
     };
 
-
   componentDidMount() {
     const {fetchTrainings} = this.props;
     fetchTrainings();
   }
 
   render() {
-    const { isLoading, isError, isLoaded, data } = this.props.trainings;
-    const mappedTrainings = data.map((training) => {
-      return <p key={training.id}>{training.name}</p>;
-    });
+    const { isLoading, isLoaded, data } = this.props.trainings;
     return(
       <div> 
-        {isLoading && <Loader />}
-        <SectionHeading icon={faDumbbell} title='Lista treningów' />
-        
-        {isLoaded &&  mappedTrainings}
+        <SectionLoadingComponent 
+          isLoading={isLoading} 
+          isLoaded={isLoaded} 
+          title='Lista ćwiczeń'
+          icon={faDumbbell}
+          data={data}
+          />
       </div>
     );
   }
