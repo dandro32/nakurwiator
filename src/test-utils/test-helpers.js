@@ -18,10 +18,8 @@ export const populateMockData = (count, reducerName) => {
   return returnState;
 };
 
-// export function mockComponent (componentName) {
-//   return (props) => {
-//     return (
-//       <mocked originalComponent={componentName} {...props}>{props.children}</mocked>
-//     )
-//   }
-// }
+export function mockComponent (ComponentToWrap) {
+  return function ComponentToWrapWithLoading({...props}) {
+    return (<ComponentToWrap {...props} />);
+  }
+}

@@ -14,6 +14,8 @@ describe('Api-actions tests', () => {
   });
 
   it('should check requestError function', () => {
-    expect(api.requestError('err')).toEqual({type: 'REQUEST_ERROR', data: 'err'});    
+    expect(api.requestError('err')).toEqual(
+      {type: 'REQUEST_ERROR', data: 'err'}
+    );    
   });
 });
