@@ -8,6 +8,7 @@ class TableWrapper extends Component {
 
 
   render() {
+    console.log(this.props.columns)
      const { data } = this.props;
      const mappedTrainings = data.map((training) => {
       return <p key={training.id}>{training.name}</p>;

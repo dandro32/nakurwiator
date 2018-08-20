@@ -1,5 +1,6 @@
 import deepFreeze from 'deep-freeze';
 import {getInitialState} from '../reducers/initial-state';
+import React from 'react';
 
 export const freeze = (...objList) => {
   objList.forEach((obj) => {
@@ -16,3 +17,11 @@ export const populateMockData = (count, reducerName) => {
   returnState[reducerName].isLoaded = true;
   return returnState;
 };
+
+// export function mockComponent (componentName) {
+//   return (props) => {
+//     return (
+//       <mocked originalComponent={componentName} {...props}>{props.children}</mocked>
+//     )
+//   }
+// }

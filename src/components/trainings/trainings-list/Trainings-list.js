@@ -23,8 +23,37 @@ export class TrainingsList extends Component {
     fetchTrainings();
   }
 
+  getTableColumns() {
+    return [{
+      Header: 'ID',
+      accessor: 'id' // String-based value accessors!
+    }, {
+      Header: 'Data',
+      accessor: 'date',
+    }, {
+      Header: 'Twoja masa',
+      accessor: 'mass',
+    }, {
+      Header: 'Białeczko',
+      accessor: 'protein',
+    }, {
+      Header: 'Ile cisłeś',
+      accessor: 'mass',
+    }, {
+      Header: 'Ćwiczonka',
+      accessor: 'exercises',
+    },
+    {
+      Header: 'Kaj to robiłeś',
+      accessor: 'where',
+    }
+  ]
+  
+  }
+
   render() {
     const { isLoading, isLoaded, data } = this.props.trainings;
+    const columns = this.getTableColumns();
     return(
       <div> 
         <SectionLoadingComponent 
@@ -33,6 +62,7 @@ export class TrainingsList extends Component {
           title='Lista ćwiczeń'
           icon={faDumbbell}
           data={data}
+          columns={columns}
           />
       </div>
     );
