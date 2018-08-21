@@ -10,12 +10,23 @@ describe('Trainings List Container Tests', () => {
     };
     expect(mapStateToProps(dummyState)).toEqual({trainings: 'test' });
   });
-  it('should check mapDispatchToProps function', () => {
+
+  it('should check mapDispatchToProps fetchTrainings function', () => {
     const dispatch = jest.fn();
     const spy = jest.spyOn(act, 'apiGetTrainings').mockReturnValue(true);
 
     mapDispatchToProps(dispatch).fetchTrainings();
     expect(dispatch.mock.calls[0][0]).toBe(true);
     expect(spy).toHaveBeenCalled();
+  });
+
+  it('should check mapDispatchToProps function deleteTraining', () => {
+    const dispatch = jest.fn();
+    const spy = jest.spyOn(act, 'apiRemoveTraining').mockReturnValue(true);
+    const mockId = '3';
+
+    mapDispatchToProps(dispatch).deleteTraining(mockId);
+    expect(dispatch.mock.calls[0][0]).toBe(true);
+    expect(spy).toHaveBeenCalledWith(mockId);
   });
 });

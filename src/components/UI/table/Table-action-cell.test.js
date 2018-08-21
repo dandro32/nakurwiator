@@ -7,12 +7,11 @@ describe('TableActionCell component tests', () => {
   let renderer;
   let json;
   const mockDeleteFunc = jest.fn();
-  const mockLinkTo = 'test';
   const mockId = '4';
 
   beforeEach(() => {
     renderer = TestRenderer.create(
-      <Router><TableActionCell id={mockId} linkTo={mockLinkTo} deleteFunc={mockDeleteFunc}/></Router>
+      <Router><TableActionCell id={mockId} deleteFunc={mockDeleteFunc}/></Router>
     );
     json = renderer.toJSON();
   });

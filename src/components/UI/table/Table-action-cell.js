@@ -4,22 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye, faEdit, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-const TableActionCell = ({linkTo, id, deleteFunc}) => {
+const TableActionCell = ({ id, deleteFunc}) => {
   return (
-    <div>
-      <Link to={`${linkTo}/${id}`}>
+    <div className='row justify-content-around'>
+      <Link to={id}>
         <FontAwesomeIcon icon={faEye} />
       </Link>
-      <Link to={`${linkTo}/${id}/edit`}>
+      <Link to={`${id}/edit`}>
         <FontAwesomeIcon icon={faEdit} />
       </Link>
-      <FontAwesomeIcon className='tableDeleteButton' icon={faTrash} onClick={()=> deleteFunc(id)} />
+      <span>
+        <FontAwesomeIcon className='tableDeleteButton' icon={faTrash} onClick={()=> deleteFunc(id)} />
+      </span>
     </div>
   );
 };
 
 TableActionCell.propTypes = {
-  linkTo: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   deleteFunc: PropTypes.func.isRequired
 };

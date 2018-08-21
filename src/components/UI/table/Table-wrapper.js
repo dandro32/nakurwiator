@@ -4,36 +4,38 @@ import SectionComponent from '../../UI/section/Section';
 import TableActionCell from './Table-action-cell';
 import ReactTable from 'react-table'
 import 'react-table/react-table.css';
-
+import confirmBox from '../../UI/confirm-box/confirm-box';
 
 class TableWrapper extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
-    columns: PropTypes.array.isRequired
+    columns: PropTypes.array.isRequired,
+    deleteRow: PropTypes.func.isRequired,
   };
 
-  addActionsCellToRow(columns, linkTo) {
+  addActionsCellToRow(columns) {
     if(Array.isArray(columns)) {
       const actionCell = {
-        id: 'Akcje',
+        Header: 'Akcje',
         accessor: 'id',
         Cell: ({value}) => (
-         <TableActionCell id={value} linkTo={linkTo} deleteFunc={this.deleteRow.bind(this)} />
+         <TableActionCell id={value} deleteFunc={this.deleteRow.bind(this)} />
         )
       };
-
       return [...columns, actionCell];
     }
   }
 
   deleteRow(id) {
-    console.log(id);
-    console.log('wywalamy ' + id)
+    const removeFunction = () => {
+      this.props.deleteRow(id);
+    }
+    confirmBox('test', removeFunction);
   }
 
   render() {
     let { data, columns } = this.props;
-    columns = this.addActionsCellToRow(columns, 'trainings');
+    columns = this.addActionsCellToRow(columns);
     return (
       <div>
         <ReactTable

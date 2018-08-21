@@ -59,4 +59,11 @@ a:hover {
     top: 50% !important;
 }
 
+.tableDeleteButton {
+    color: $link-blue;
+    cursor: pointer;
+    &:hover {
+        color:$link-blue-hover;
+    }
+}
 @import 'responsive.scss'

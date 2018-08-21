@@ -8,6 +8,7 @@ export const mapStateToProps = ({trainingsReducer}) => ({
 
 export const  mapDispatchToProps = dispatch =>
   ({
+    deleteTraining: (id) =>dispatch(act.apiRemoveTraining(id)),
     fetchTrainings:() => dispatch(act.apiGetTrainings())
   });
 

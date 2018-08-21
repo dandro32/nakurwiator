@@ -11,11 +11,13 @@ exports[`Training List components should render properly component output 1`] = 
         },
         Object {
           "Header": "Data",
-          "accessor": "date",
+          "accessor": [Function],
+          "id": "date",
         },
         Object {
           "Header": "Twoja masa",
-          "accessor": "mass",
+          "accessor": [Function],
+          "id": "mass",
         },
         Object {
           "Header": "Białeczko",
@@ -23,11 +25,13 @@ exports[`Training List components should render properly component output 1`] = 
         },
         Object {
           "Header": "Ile cisłeś",
-          "accessor": "mass",
+          "accessor": [Function],
+          "id": "time",
         },
         Object {
           "Header": "Ćwiczonka",
-          "accessor": "exercises",
+          "accessor": [Function],
+          "id": "exercises",
         },
         Object {
           "Header": "Kaj to robiłeś",
@@ -40,6 +44,7 @@ exports[`Training List components should render properly component output 1`] = 
         "test",
       ]
     }
+    deleteRow={[Function]}
     icon={
       Object {
         "icon": Array [
