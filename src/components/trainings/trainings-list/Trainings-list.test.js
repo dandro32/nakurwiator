@@ -21,12 +21,20 @@ describe('Training List components', () => {
     const renderer = TestRenderer.create(
       <TrainingsList fetchTrainings={mockFetchTrainings} trainings={mockTrainings}/>
     );
-    componentInstance = renderer.getInstance();
+    componentInstance = renderer.root.instance;
     json = renderer.toJSON();
+  });
+
+  it('should called fetchTraining method on didMount', () => {
+    expect(mockFetchTrainings.mock.calls.length).toBe(1);
   });
 
   it('should render properly component output', () => {
     expect(json).toMatchSnapshot();
+  });
+
+  it('should check columns passed to table wrapper', () => {
+    expect(componentInstance.getTableColumns().length).toEqual(7);
   });
 
 });
