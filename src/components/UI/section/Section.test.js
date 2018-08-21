@@ -1,10 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import SectionComponent from './Section';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 
-Enzyme.configure({ adapter: new Adapter() });
 jest.mock('../loader/Loader', () => 'loader');
 jest.mock('../section-heading/Section-heading', () => 'sectionheading');
 
