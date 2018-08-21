@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import SectionComponent from '../../UI/section/Section';
 
 class TableWrapper extends Component {
   static propTypes = {
@@ -8,7 +9,6 @@ class TableWrapper extends Component {
 
 
   render() {
-    console.log(this.props.columns)
      const { data } = this.props;
      const mappedTrainings = data.map((training) => {
       return <p key={training.id}>{training.name}</p>;
@@ -18,4 +18,4 @@ class TableWrapper extends Component {
 
 }
 
-export default TableWrapper;
+export default SectionComponent(TableWrapper);

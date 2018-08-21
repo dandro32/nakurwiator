@@ -1,4 +1,4 @@
-import { TrainingsList } from './Trainings-list';
+import TrainingsList from './Trainings-list';
 import { connect } from 'react-redux';
 import * as act from './../../../actions/training-actions';
 

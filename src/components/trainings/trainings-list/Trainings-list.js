@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import SectionComponent from '../../UI/section/Section'
 import { faDumbbell} from '@fortawesome/free-solid-svg-icons';
 import TableWrapper from '../../UI/table/Table-wrapper';
 
-const SectionLoadingComponent = SectionComponent(TableWrapper);
-
-export class TrainingsList extends Component {
+class TrainingsList extends Component {
 
     static propTypes = {
         fetchTrainings: PropTypes.func.isRequired,
@@ -56,7 +53,7 @@ export class TrainingsList extends Component {
     const columns = this.getTableColumns();
     return(
       <div> 
-        <SectionLoadingComponent 
+        <TableWrapper 
           isLoading={isLoading} 
           isLoaded={isLoaded} 
           title='Lista ćwiczeń'
@@ -68,3 +65,5 @@ export class TrainingsList extends Component {
     );
   }
 }
+
+export default TrainingsList;
