@@ -24,6 +24,7 @@ class TableWrapper extends Component {
       };
       return [...columns, actionCell];
     }
+    return [...columns];
   }
 
   deleteRow(id) {
