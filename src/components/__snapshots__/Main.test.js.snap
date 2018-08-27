@@ -19,6 +19,11 @@ exports[`Main component tests renders correctly 1`] = `
   />
   <Route
     exact={undefined}
+    path="/trainings/new"
+    render={[Function]}
+  />
+  <Route
+    exact={undefined}
     path="/exercises"
     render={[Function]}
   />

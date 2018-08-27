@@ -4,6 +4,7 @@ import Raports from '../components/raports/Raports';
 import Extras from '../components/extras/Extras';
 import Settings from '../components/settings/Settings';
 import TrainingsListContainer from '../components/trainings/trainings-list/Trainings-list-container';
+import TrainingNewContainer from '../components/trainings/training/Training-new-container';
 
 const ROUTES = [
   {
@@ -14,6 +15,10 @@ const ROUTES = [
   {
     path: '/trainings/list',
     component: TrainingsListContainer
+  },
+  {
+    path: '/trainings/new',
+    component: TrainingNewContainer
   },
   {
     path: '/exercises',
