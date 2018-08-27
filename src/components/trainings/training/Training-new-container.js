@@ -1,6 +1,11 @@
-import TrainingNew from './Training-new';
+import Training from './Training';
 import { connect } from 'react-redux';
 import * as act from '../../../actions/training-actions';
+import INITIAL_TRAINING from '../../../models/initial-training';
+
+export const mapStateToProps = () => ({
+  training: INITIAL_TRAINING
+});
 
 export const  mapDispatchToProps = dispatch =>
   ({
@@ -8,8 +13,8 @@ export const  mapDispatchToProps = dispatch =>
   });
 
 const TrainingNewContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
-)(TrainingNew);
+)(Training);
 
 export default TrainingNewContainer;
