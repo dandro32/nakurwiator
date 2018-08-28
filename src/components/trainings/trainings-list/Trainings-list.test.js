@@ -2,10 +2,7 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import TrainingsList from './Trainings-list';
 
-
-
 jest.mock('../../UI/table/Table-wrapper', () => 'Table wrapper');
-
 
 describe('Training List components', () => {
   let componentInstance;

@@ -1,4 +1,4 @@
-import Training from './Training';
+import TrainingNew from './Training-new';
 import { connect } from 'react-redux';
 import * as act from '../../../actions/training-actions';
 import INITIAL_TRAINING from '../../../models/initial-training';
@@ -15,6 +15,6 @@ export const  mapDispatchToProps = dispatch =>
 const TrainingNewContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Training);
+)(TrainingNew);
 
 export default TrainingNewContainer;
