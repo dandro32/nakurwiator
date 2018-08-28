@@ -1,5 +1,5 @@
 const INITIAL_TRAINING = {
-  date: Date.now(),
+  date: new Date(),
   mass: 0,
   protein: null,
   time: 0,

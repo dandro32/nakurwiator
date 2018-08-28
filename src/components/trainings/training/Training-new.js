@@ -16,13 +16,15 @@ class TrainingNew extends Component {
   }
 
   render() {
+    const {training} = this.props;
     return(  
     <TrainingForm 
       isLoading={false} 
       isLoaded={true} 
       title='Nowy trening'
       icon={faDumbbell}
-      addTraining={(e)=>this.addTraining(e)}
+      training={training}
+      addTraining={(e)=>this.addTraining(training, e)}
       />);
   }
 }
