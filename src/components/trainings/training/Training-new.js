@@ -7,7 +7,6 @@ class TrainingNew extends Component {
   
   static propTypes = {
     addTraining: PropTypes.func.isRequired,
-    training: PropTypes.object.isRequired
   };
 
   addTraining(training) {
@@ -23,7 +22,6 @@ class TrainingNew extends Component {
       isLoaded={true} 
       title='Nowy trening'
       icon={faDumbbell}
-      training={training}
       addTraining={(e)=>this.addTraining(training, e)}
       />);
   }
